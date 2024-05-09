@@ -7,6 +7,7 @@ const Formulario = ({citas, setCitas}) => {
         setCitas([
             ...citas,
             {
+                Id: Date.now(),
                 Mascota: e.target.Mascota.value,
                 Dueño:e.target.Dueño.value,
                 Fecha: e.target.Fecha.value,
