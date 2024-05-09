@@ -5,10 +5,24 @@ const Card = (
         Dueño = "Default dueño",
         Fecha = "2021-08-05",
         Hora= "08:20",
-        Sintomas = "Le duele la pierna"
+        Sintomas = "Le duele la pierna",/*
+        citas = citas,
+        setCitas = setCitas
+        */
     }
     
     ) => {
+        /*
+        const buscarCita = (element) => element == {Mascota,Dueño,Fecha,Hora,Sintomas};
+
+        const eliminarCita = (e) => {
+            let index = citas.findIndex(buscarCita);
+            setCitas([
+                citas.splice(index, 1);
+            ])
+        }
+        */
+
     return (
         <>
             <div className='cita'>

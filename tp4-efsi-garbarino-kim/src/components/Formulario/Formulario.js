@@ -1,11 +1,12 @@
 import './formulario.css';
 import ItemFormulario from '../ItemFormulario/ItemFormulario';
-const Formulario = (citas, setCitas) => {
+const Formulario = ({citas, setCitas}) => {
     const agregarCita = (e) =>{
+        e.preventDefault();
+        console.log(citas);
         setCitas([
             ...citas,
             {
-
                 Mascota: e.target.Mascota.value,
                 Dueño:e.target.Dueño.value,
                 Fecha: e.target.Fecha.value,
@@ -13,19 +14,20 @@ const Formulario = (citas, setCitas) => {
                 Sintomas: e.target.Sintomas.value
             }
         ])
+        console.log(citas);
     }
     
     
     return (
         <div class="one-half column">
         <h2>Crear mi cita </h2>
-       <form onSubmit={agregarCita}>
+        <form onSubmit={agregarCita}>
         <ItemFormulario texto='Nombre Mascota' name="Mascota" placeHolder='Nombre Mascota' type='text' ></ItemFormulario>
-        <ItemFormulario texto='Nombre Dueño' name="dueño"  placeHolder='Nombre dueño de la mascota' type='text' ></ItemFormulario>
+        <ItemFormulario texto='Nombre Dueño' name="Dueño"  placeHolder='Nombre dueño de la mascota' type='text' ></ItemFormulario>
         <ItemFormulario texto='Fecha' name="Fecha"  type='date'></ItemFormulario>
         <ItemFormulario texto='Hora' name="Hora" type='time' ></ItemFormulario>
         <label>Sintomas</label>
-        <textarea class='u-full-width' name='Sintomas'></textarea>
+        <input type='text' class='u-full-width' id='textarea' name='Sintomas'></input>
         <input type='submit' value='Agregar Cita' class='u-full-width button-primary'></input>
        </form>
        </div>

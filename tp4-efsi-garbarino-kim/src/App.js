@@ -7,8 +7,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [citas,setCitas] = useState([]);
-  setCitas([
+  const [citas,setCitas] = useState([
     {
       Mascota: "Nina",
       Dueño:"Martin",
@@ -30,7 +29,7 @@ function App() {
       Hora:"16:15",
       Sintomas:"No esta comiendo"
     }
-  ])
+  ]);
 
   return (
     <>
