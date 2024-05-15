@@ -2,8 +2,6 @@ import './formulario.css';
 import ItemFormulario from '../ItemFormulario/ItemFormulario';
 const Formulario = ({citas, setCitas}) => {
     const agregarCita = (e) =>{
-        e.preventDefault();
-        console.log(citas);
         setCitas([
             ...citas,
             {
@@ -15,7 +13,6 @@ const Formulario = ({citas, setCitas}) => {
                 Sintomas: e.target.Sintomas.value
             }
         ])
-        console.log(citas);
     }
     
     

@@ -11,17 +11,19 @@ const Card = (
     }
     
     ) => {
-        const eliminarCita = (Id) => {
-            console.log(citas);
+        
+        console.log(citas);
+        const eliminarCita = (e) => {
+            e.preventDefault();
             setCitas([
               citas.filter(c =>
                 c.Id !== Id
               )
               ]);
-            console.log(citas);
           }
     return (
         <>
+            
             <div className='cita'>
                 <p>Mascota: <span>{Mascota}</span></p>
                 <p>Dueño: <span>{Dueño}</span></p>

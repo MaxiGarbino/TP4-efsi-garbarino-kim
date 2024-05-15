@@ -3,8 +3,6 @@ import Card from '../Card/Card';
 
 const Cita = ({citas,setCitas}) => {
     
-    
-    console.log(citas.citas);
     return (
        <div class="one-half column">
        <h2>Administra tus citas </h2>
