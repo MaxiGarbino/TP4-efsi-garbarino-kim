@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
   const [citas,setCitas] = useState([
     {
-      Id: Date.now(),
+      Id: 1,
       Mascota: "Nina",
       Dueño:"Martin",
       Fecha:"2021-08-05",
@@ -17,7 +17,7 @@ function App() {
       Sintomas:"Le duele la pierna"
     },
     {
-      Id: Date.now(),
+      Id: 2,
       Mascota: "Sifon",
       Dueño:"Flecha",
       Fecha:"2023-08-05",
@@ -25,7 +25,7 @@ function App() {
       Sintomas:"Duerme mucho"
     },
     {
-      Id: Date.now(),
+      Id: 3,
       Mascota: "Floki",
       Dueño:"Ari",
       Fecha:"2023-08-05",

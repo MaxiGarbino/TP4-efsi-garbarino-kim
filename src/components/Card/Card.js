@@ -15,11 +15,11 @@ const Card = (
         console.log(citas);
         const eliminarCita = (e) => {
             e.preventDefault();
-            setCitas([
-              citas.filter(c =>
-                c.Id !== Id
+            setCitas(
+              citas.filter(e =>
+                e.Id !== Id
               )
-              ]);
+              );
           }
     return (
         <>
