@@ -2,6 +2,8 @@ import './formulario.css';
 import ItemFormulario from '../ItemFormulario/ItemFormulario';
 const Formulario = ({citas, setCitas}) => {
     const agregarCita = (e) =>{
+        e.preventDefault();
+        if(window.confirm("¿Esta seguro de agregar esta cita?")){
         setCitas([
             ...citas,
             {
@@ -12,7 +14,7 @@ const Formulario = ({citas, setCitas}) => {
                 Hora: e.target.Hora.value,
                 Sintomas: e.target.Sintomas.value
             }
-        ])
+        ])}
     }
     
     
