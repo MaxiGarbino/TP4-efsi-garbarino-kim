@@ -3,18 +3,30 @@ import ItemFormulario from '../ItemFormulario/ItemFormulario';
 const Formulario = ({citas, setCitas}) => {
     const agregarCita = (e) =>{
         e.preventDefault();
-        if(window.confirm("¿Esta seguro de agregar esta cita?")){
-        setCitas([
-            ...citas,
-            {
-                Id: Date.now(),
-                Mascota: e.target.Mascota.value,
-                Dueño:e.target.Dueño.value,
-                Fecha: e.target.Fecha.value,
-                Hora: e.target.Hora.value,
-                Sintomas: e.target.Sintomas.value
-            }
-        ])}
+        console.log(e.target.Mascota.value.length)
+        console.log(e.target.Fecha.value.length)
+        console.log(e.target.Hora.value.length)
+        if(e.target.Mascota.value.length !== 0 && e.target.Dueño.value.length !== 0 && e.target.Sintomas.value.length !== 0 && e.target.Fecha.value.length !== 0 && e.target.Hora.value.length !== 0)
+        {
+            if(window.confirm("¿Esta seguro de agregar esta cita?")){
+            
+                setCitas([
+                ...citas,
+                {
+                    Id: Date.now(),
+                    Mascota: e.target.Mascota.value,
+                    Dueño:e.target.Dueño.value,
+                    Fecha: e.target.Fecha.value,
+                    Hora: e.target.Hora.value,
+                    Sintomas: e.target.Sintomas.value
+                }
+            ])}
+        }
+        else
+        {
+            alert('Los datos estan mal')
+        }
+       
     }
     
     

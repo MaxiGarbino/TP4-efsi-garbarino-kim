@@ -12,7 +12,6 @@ const Card = (
     
     ) => {
         
-        console.log(citas);
         const eliminarCita = (e) => {
             e.preventDefault();
             if(window.confirm("¿Esta seguro de eliminar una cita?")){
